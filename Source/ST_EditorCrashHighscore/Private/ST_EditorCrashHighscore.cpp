@@ -18,7 +18,9 @@ void FST_EditorCrashHighscoreModule::StartupModule()
 	GConfig->SetBool(TEXT("ST_EditorCrashHighscore"), TEXT("CleanShutdown"), false, GEditorPerProjectIni);
 
 	if(!bCleanShutdown)
-	{
+	{	    
+	    TMap<FDateTime, int32> CrashCount;
+	
 		FString FilePath = FPaths::Combine(FPaths::ProjectSavedDir(), TEXT("ST_EditorCrashHighscore.dat"));
 		
 		TArray<uint8> BinaryArray;

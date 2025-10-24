@@ -17,5 +17,4 @@ public:
 private:
 	static void ShowEditorNotification(const FString Message, SNotificationItem::ECompletionState State);
 
-	TMap<FDateTime, int32> CrashCount;
 };
